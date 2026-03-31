@@ -19,7 +19,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/functions.php';
 //Enqueue CSS & JS
 function fwb_enqueue_assets()
 {
-    wp_enqueue_style('fwb_style', plugin_dir_url(__FILE__) . 'assets/css/style.css');
-    wp_enqueue_script('fwb_script', plugin_dir_url(__FILE__) . 'assets/js/script.js');
+    wp_enqueue_style('fwb_style', plugin_dir_url(__FILE__) . 'assets/css/style.css', [], '1.0.0');
+    wp_enqueue_script('fwb_script', plugin_dir_url(__FILE__) . 'assets/js/script.js', ['query'], true);
 }
 add_action('wp_enqueue_scripts', 'fwb_enqueue_assets');
